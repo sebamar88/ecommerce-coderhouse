@@ -1,14 +1,17 @@
-import Header from "./Header";
+import NavBar from "./Nav/NavBar";
 import Footer from "./Footer";
+import { Container } from "react-bootstrap";
 
-const Layout = ({children}) => {
-  return ( 
+const Layout = ({ children }) => {
+  let Pepe = "Ladri";
+  console.log(Pepe);
+  return (
     <>
-      <Header />
-      {children}
+      <NavBar />
+      <Container className="mt-4">{children}</Container>
       <Footer />
     </>
   );
-}
+};
 
 export default Layout;
