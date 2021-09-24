@@ -1,4 +1,14 @@
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { useState } from "react";
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Button,
+  Modal,
+  Badge,
+} from "react-bootstrap";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
@@ -9,8 +19,14 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <NavDropdown title="Products" id="collasible-nav-dropdown">
+              <Nav.Link className="me-2" href="#features">
+                Home
+              </Nav.Link>
+              <NavDropdown
+                className="me-2"
+                title="Products"
+                id="collasible-nav-dropdown"
+              >
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -23,7 +39,10 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#pricing">Contact Us</Nav.Link>
+              <Nav.Link className="me-2" href="#pricing">
+                Contact Us
+              </Nav.Link>
+              <CartWidget />
             </Nav>
           </Navbar.Collapse>
         </Container>

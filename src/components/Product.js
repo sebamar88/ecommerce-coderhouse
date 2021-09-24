@@ -1,25 +1,22 @@
-import React from "react";
+import { Card, Button } from "react-bootstrap";
 
 const Product = ({ item }) => {
   const { fields, id } = item;
   const { name, image, company, price } = fields;
   return (
-    <div className="col-sm-6 col-lg-3">
-      <h4>{name}</h4>
-      <div className="overflow-hidden">
-        <img
-          src={image[0].thumbnails.large.url}
-          className="img-fluid"
-          alt={name}
-        />
-      </div>
-      <p>Brand: {company}</p>
-      <span>${price}</span>
-      <div>
-        <a href="!#" className="btn btn-primary">
-          Buy Now
-        </a>
-      </div>
+    <div className="col-sm-6 col-lg-3 mb-3">
+      <Card>
+        <Card.Img variant="top" src={image[0].thumbnails.large.url} />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            <h4>{name}</h4>
+            <p>Brand: {company}</p>
+            <span>${price}</span>
+          </Card.Text>
+          <Button variant="primary">Buy Now</Button>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

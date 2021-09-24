@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./Nav/NavBar";
 import Footer from "./Footer";
 import { Container } from "react-bootstrap";
 
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <NavBar />
-      <Container>{children}</Container>
+      <Container className="mt-4">{children}</Container>
       <Footer />
     </>
   );
