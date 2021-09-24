@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 
 const Product = ({ item }) => {
-  const { fields, id } = item;
+  const { fields } = item;
   const { name, image, company, price } = fields;
   return (
     <div className="col-sm-6 col-lg-3 mb-3">
